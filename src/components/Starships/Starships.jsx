@@ -18,17 +18,17 @@ const Starships = () => {
 
   console.log(starships)
 
-  if (!starships) return <h1>Loading Starships...</h1>
+  if (!starships.length) return <h1>Loading Starships...</h1>
 
   return (
     <main>
-      <h1>STARSHIPS</h1>
+      <h1>Starships</h1>
       <div className="card-container">
         {starships.map((starship, idx) => {
-          const shipId = starship.url.slice(21)
+          const shipshipId = starship.url.slice(21)
           return (
             <div className="starship-card" key={idx}>
-              <Link to={`${shipId}`}>{starship.name}</Link>
+              <Link to={`${shipshipId}`}>{starship.name}</Link>
             </div>
           )
         })}

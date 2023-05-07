@@ -11,3 +11,13 @@ export async function getStarship(starshipId){
   return res.json()
 }
 
+export async function getAllPlanets() {
+  const res = await fetch(`${baseUrl}/planets`)
+  return res.json()
+}
+
+export async function getPlanet(planetId){
+  const res = await fetch (`${baseUrl}/planets/${planetId}`)
+  return res.json()
+}
+
